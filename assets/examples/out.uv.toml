@@ -1,0 +1,22 @@
+[build-system]
+requires = ["poetry-core>=1.8.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project]
+name = "example-poetry-project"
+version = "0.2.0"
+description = "Example project in Poetry format"
+authors = [{ name = "Aleksei Fomenko", email = "fomenko_ai@proton.me" }]
+requires-python = ">=3.11.0, <4.0.0"
+dependencies = ["requests >=2.31.0,<3.0.0", "rich >=13.0.0,<14.0.0 ; python_version >= '3.11'", "uvicorn >=0.30.0,<0.31.0", "httptools >=0.6.0,<0.7.0"]
+
+[project.urls]
+Homepage = "https://example.com"
+Repository = "https://github.com/example/example-poetry-project"
+
+[project.optional-dependencies]
+server = ["uvicorn >=0.30.0,<0.31.0", "httptools >=0.6.0,<0.7.0"]
+
+[dependency-groups]
+dev = ["pytest >=8.0.0,<9.0.0", "mypy >=1.10.0,<2.0.0 ; platform_system != 'Windows'"]
+test = ["hypothesis >=6.0.0,<7.0.0"]

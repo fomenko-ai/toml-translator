@@ -1,0 +1,32 @@
+[project]
+name = "toml-translator"
+version = "0.1.0"
+description = "Translator between Poetry and uv pyproject.toml formats"
+requires-python = ">=3.11"
+
+authors = [
+  { name = "Aleksei Fomenko", email = "fomenko_ai@proton.me" }
+]
+
+dependencies = []
+
+readme = "README.md"
+license = { text = "MIT" }
+
+keywords = [
+  "toml",
+  "poetry",
+  "uv",
+  "packaging",
+  "python",
+  "pyproject",
+  "translator"
+]
+
+[project.urls]
+Homepage = "https://github.com/fomenko-ai/toml-translator"
+Repository = "https://github.com/fomenko-ai/toml-translator"
+Issues = "https://github.com/fomenko-ai/toml-translator/issues"
+
+[project.scripts]
+toml-translator = "toml_translator.cli:main"

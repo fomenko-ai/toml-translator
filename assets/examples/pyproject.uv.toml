@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "example-uv-project"
+version = "0.2.0"
+description = "Example project in uv / PEP 621 format"
+requires-python = ">=3.11"
+
+authors = [
+  { name = "Aleksei Fomenko", email = "fomenko_ai@proton.me" }
+]
+
+dependencies = [
+  "requests>=2.31",
+  "rich>=13 ; python_version >= \"3.11\""
+]
+
+[project.optional-dependencies]
+server = [
+  "uvicorn>=0.30",
+  "httptools>=0.6"
+]
+
+[project.urls]
+Homepage = "https://example.com"
+Repository = "https://github.com/example/example-uv-project"
+
+[dependency-groups.dev]
+dependencies = [
+  "pytest>=8.0",
+  "mypy>=1.10 ; platform_system != \"Windows\""
+]
+
+[dependency-groups.test]
+dependencies = [
+  "hypothesis>=6.0"
+]
+
+[tool.uv]
+index-url = "https://pypi.org/simple"
